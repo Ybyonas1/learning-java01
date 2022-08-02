@@ -261,21 +261,124 @@ public class Main {
 //        while(doCount <= 20);
 
 //        Scanner Class
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.println("What is your name?");
+//        String userName = scanner.nextLine();
+//        System.out.println("Hello " + userName);
+//
+//        System.out.println("How old are you ?");
+//        int age = scanner.nextInt();
+//        int year = LocalDate.now().minusYears(age).getYear();
+//        System.out.println("Born in the year of " + year);
+//
+//        if (age <= 18) {
+//            System.out.println("You are not an adult");
+//        } else {
+//            System.out.println("You're an adult :)");
+//        }
 
-        System.out.println("What is your name?");
-        String userName = scanner.nextLine();
-        System.out.println("Hello " + userName);
+//        METHODS
 
-        System.out.println("How old are you ?");
-        int age = scanner.nextInt();
-        int year = LocalDate.now().minusYears(age).getYear();
-        System.out.println("Born in the year of " + year);
+//        System.out.println("Hello");
+//        String brand = "Samsung";
+//        System.out.println(brand.toUpperCase());
+//        boolean startsWithS = brand.startsWith("s");
+//        System.out.println(startsWithS);
+//        // or
+//        System.out.println(brand.startsWith("S"));
+//        System.out.println(brand.endsWith("g"));
 
-        if (age <= 18) {
-            System.out.println("You are not an adult");
-        } else {
-            System.out.println("You're an adult :)");
+        // User defines Methods
+//        char[] letters = {'A', 'A', 'B', 'C', 'D', 'D', 'D'};
+//        int count = countOccurrences(letters, 'A');
+//        System.out.println(count);
+//    }
+//
+//    public static int countOccurrences(
+//            char [] letters, char searchLetter) {
+//        int count = 0;
+//        for (char letter : letters) {
+//            if (letter == searchLetter) {
+//                count++;
+//            }
+//        }
+//        System.out.println(Arrays.toString(letters));
+//        System.out.println(searchLetter);
+//        System.out.println("Method countOccurrences was invoked");
+
+//        return count;
+
+//        CLASSES AND OBJECTS
+        Lens lensOne = new Lens(
+                "Sony",
+                "85mm",
+                true
+        );
+        Lens lensTwo = new Lens(
+                "Canon",
+                "30mm",
+                true
+        );
+        Lens lensThree = new Lens(
+                "Nikon",
+                "24-70mm",
+                true
+        );
+        System.out.println("Lens 1");
+        System.out.println(lensOne.brand);
+        System.out.println(lensOne.focalLength);
+        System.out.println(lensOne.isPrime);
+        System.out.println();
+
+        System.out.println("Lens 2");
+        System.out.println(lensTwo.brand);
+        System.out.println(lensTwo.focalLength);
+        System.out.println(lensTwo.isPrime);
+        System.out.println();
+
+        System.out.println("Lens 3");
+        System.out.println(lensThree.brand);
+        System.out.println(lensThree.focalLength);
+        System.out.println(lensThree.isPrime);
+
+
+        Passport ukPassport = new Passport(
+                "1234",
+                "England",
+                LocalDate.of(2025, 1, 1));
+        Passport usPassport = new Passport(
+                "5678",
+                "England",
+                LocalDate.of(2028, 5, 5));
+
+    }
+    static class Lens {
+        String brand;
+        String model;
+        double price;
+        double weight;
+        String focalLength;
+        boolean isPrime;
+
+        Lens(String brand,
+             String focalLength,
+             boolean isPrime) {
+            this.brand = brand;
+            this.focalLength = focalLength;
+            this.isPrime = isPrime;
+        }
+    }
+
+    static class Passport {
+        String number;
+        String country;
+        LocalDate expiryDate;
+
+        Passport(String number, String country, LocalDate expiryDate) {
+            this.number = number;
+            this.country = country;
+            this.expiryDate = expiryDate;
         }
     }
 }
