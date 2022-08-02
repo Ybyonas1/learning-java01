@@ -1,5 +1,6 @@
 import java.sql.SQLOutput;
 import java.time.LocalDateTime;
+import java.util.Arrays;
 import java.util.Date;
 import java.time.LocalDate;
 
@@ -169,5 +170,28 @@ public class Main {
 //            default:
 //                System.out.println("Unknown");
 //        }
+
+//        ARRAYS
+        int [ ] numbers = {2, 0, 1, 1232, 24324, 980};
+//        int [] numbers = new int[3];
+//        numbers[0] = 0;
+//        numbers[1] = 1;
+//        numbers[2] = 2;
+//        numbers[3] = 34; /*throws error*/
+//        boolean [] numbers = new boolean[3];
+//        String [] numbers = new String[3];
+        System.out.println(Arrays.toString(numbers));
+        System.out.println(numbers.length);
+
+        String [] names = {"Ali", "Maria"};
+        System.out.println(names.length);
+        System.out.println(Arrays.toString(names));
+        int thirdNum = numbers[2];
+        int thirdNum1 = numbers[numbers.length-1];
+        System.out.println(thirdNum);
+        System.out.println(thirdNum1);
+
+//        LOOPS --- INCREMENTING AND DECREMENTING
+
     }
 }
