@@ -3,6 +3,7 @@ import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Date;
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -191,10 +192,10 @@ public class Main {
 //        System.out.println(thirdNum);
 //        System.out.println(thirdNum1);
 
-//        LOOPS --- INCREMENTING AND DECREMENTING
+//        FOR LOOPS --- INCREMENTING AND DECREMENTING
 
-        int [ ] loopTestNum = {2, 0, 1, 12, 24, 98, 105, 77, 49};
-        String[] names = {"Anna", "Ali", "Bobby"};
+//        int [ ] loopTestNum = {2, 0, 1, 12, 24, 98, 105, 77, 49};
+//        String[] names = {"Anna", "Ali", "Bobby"};
 
 //        int number = 0;
 //        number++; /*equivalant to: number = number + 1 */
@@ -212,8 +213,8 @@ public class Main {
 //        for (String name :names) {
 //            System.out.println(name);
 //        }
-        Arrays.stream(loopTestNum).forEach(System.out::println);
-        Arrays.stream(names).forEach(System.out::println);
+//        Arrays.stream(loopTestNum).forEach(System.out::println);
+//        Arrays.stream(names).forEach(System.out::println);
 //        for (int i = 0; i < loopTestNum.length; i++) {
 //
 //        }
@@ -223,5 +224,58 @@ public class Main {
 //        for (String name : names) {
 //
 //        }
+
+//        BREAK AND CONTINUE
+
+//        String[] breakNames = {"Anna", "Ali", "Bobby", "Mike"};
+//        for (String breakName : breakNames) {
+//
+//            if (breakName.startsWith("B")) {
+//                continue;
+//            }
+//            System.out.println(breakName);
+//
+////            if (breakName.equals("Bobby")) {
+////                break;
+////            }
+////            System.out.println(breakName);
+//
+////            System.out.println(breakName);
+////            break;
+//        }
+
+//        WHILE & DO WHILE LOOP
+//        int count = 0;
+//
+//        while(count <= 20){
+//            System.out.println("count " + count);
+//            count++;
+//        }
+//
+//        int doCount = 21;
+//
+//        do {
+//            System.out.println("doCount " + doCount);
+//            doCount++;
+//        }
+//        while(doCount <= 20);
+
+//        Scanner Class
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("What is your name?");
+        String userName = scanner.nextLine();
+        System.out.println("Hello " + userName);
+
+        System.out.println("How old are you ?");
+        int age = scanner.nextInt();
+        int year = LocalDate.now().minusYears(age).getYear();
+        System.out.println("Born in the year of " + year);
+
+        if (age <= 18) {
+            System.out.println("You are not an adult");
+        } else {
+            System.out.println("You're an adult :)");
+        }
     }
 }
