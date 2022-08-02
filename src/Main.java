@@ -172,7 +172,7 @@ public class Main {
 //        }
 
 //        ARRAYS
-        int [ ] numbers = {2, 0, 1, 1232, 24324, 980};
+//        int [ ] numbers = {2, 0, 1, 1232, 24324, 980};
 //        int [] numbers = new int[3];
 //        numbers[0] = 0;
 //        numbers[1] = 1;
@@ -180,18 +180,48 @@ public class Main {
 //        numbers[3] = 34; /*throws error*/
 //        boolean [] numbers = new boolean[3];
 //        String [] numbers = new String[3];
-        System.out.println(Arrays.toString(numbers));
-        System.out.println(numbers.length);
-
-        String [] names = {"Ali", "Maria"};
-        System.out.println(names.length);
-        System.out.println(Arrays.toString(names));
-        int thirdNum = numbers[2];
-        int thirdNum1 = numbers[numbers.length-1];
-        System.out.println(thirdNum);
-        System.out.println(thirdNum1);
+//        System.out.println(Arrays.toString(numbers));
+//        System.out.println(numbers.length);
+//
+//        String [] names = {"Ali", "Maria"};
+//        System.out.println(names.length);
+//        System.out.println(Arrays.toString(names));
+//        int thirdNum = numbers[2];
+//        int thirdNum1 = numbers[numbers.length-1];
+//        System.out.println(thirdNum);
+//        System.out.println(thirdNum1);
 
 //        LOOPS --- INCREMENTING AND DECREMENTING
 
+        int [ ] loopTestNum = {2, 0, 1, 12, 24, 98, 105, 77, 49};
+        String[] names = {"Anna", "Ali", "Bobby"};
+
+//        int number = 0;
+//        number++; /*equivalant to: number = number + 1 */
+//        number += 3 /*equivalent to: number + 3 */
+//        System.out.println(number);
+
+//        for (int i = 0; i < loopTestNum.length; i++) {
+//            System.out.println(loopTestNum[i]);
+//        }
+//        System.out.println("Enhanced for loop");
+//        for (int number : loopTestNum) {
+//            System.out.println(number);
+//        }
+//        System.out.println("For loop for strings");
+//        for (String name :names) {
+//            System.out.println(name);
+//        }
+        Arrays.stream(loopTestNum).forEach(System.out::println);
+        Arrays.stream(names).forEach(System.out::println);
+//        for (int i = 0; i < loopTestNum.length; i++) {
+//
+//        }
+//        for (int i = loopTestNum.length - 1; i >= 0; i--) {
+//
+//        }
+//        for (String name : names) {
+//
+//        }
     }
 }
